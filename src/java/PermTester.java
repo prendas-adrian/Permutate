@@ -17,16 +17,47 @@ public class PermTester extends Hashtable<String, Permutation> {
 	final Permutation seed;
 	final String source;
 	
-	public PermTester(String method, int n){
+	public PermTester(String method, String arr){
 		this.method = method;
-		this.n = n;
-		// set max_size
+		this.n = arr.length();
+		String[] a = arr.split("");
+
+		int f = factorial(n);;
+
+		int repeated = repeatedLetters(arr);
+		if(repeated==0){
+			this.max_size = f;
+		}else{
+			int rf = factorial(repeated);
+			//System.out.println("f: "+f +" repeated: " + repeated + " rf: " + rf);
+			this.max_size = f  / rf;
+		}
+		// Set seed and source
+		//System.out.println("max size: " + this.max_size);
+		this.seed = new Permutation(method, a);
+		this.source = this.seed.source();
+	}
+
+	public int factorial(int n){
 		int f = 1;
 		for(int i = 1; i <= n; f *= i, i++);
-		this.max_size = f;
-		// Set seed and source
-		this.seed = new Permutation(method, Arrays.copyOfRange(OBJECTS, 0, n % OBJECTS.length));
-		this.source = this.seed.source();
+		return f;
+	}
+
+	public int repeatedLetters(String word){
+		String[] array = word.split("");
+
+        Map<String, Integer> counts = new HashMap<>();
+
+        for (String s : array) {
+            counts.put(s, counts.getOrDefault(s, 0) + 1);
+        }
+		int sum = counts.values()
+						.stream()
+						.filter(v->v!=1)
+						.mapToInt(Integer::intValue)
+						.sum();
+		return sum;
 	}
 	 
 	public void add(Permutation p){
