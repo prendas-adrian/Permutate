@@ -27,5 +27,5 @@ load('src/js/naive_permutate.js');
 // Tester of all
 load('src/js/test_permutate.js');
 
-
-print('\n*** load_permutate done OK ***\n');
+if(!pipe)
+  print('\n*** load_permutate done OK ***\n');
