@@ -1,29 +1,50 @@
 
-### PERMUTATION ALGORITGMS ###
+# Permutate
 
-<img src="https://user-images.githubusercontent.com/20632410/54884114-b431ba80-4e32-11e9-8250-b85a5918038b.gif" width="418">
+Permutate is a university project that compares several permutation algorithms by measuring the number of swaps each algorithm performs. The goal is to generate CSV output for algorithm analysis and to illustrate algorithm behavior using Java and JavaScript implementations.
 
-<img src="https://user-images.githubusercontent.com/20632410/54884128-cf9cc580-4e32-11e9-8e2c-e8d2f8484c26.gif" width="418">
+## Project Overview
 
-<img src="https://user-images.githubusercontent.com/20632410/54884155-3326f300-4e33-11e9-9cbe-bd88624c11a0.gif" width="418">
+This repository includes:
+- Java implementations of permutation algorithms.
+- JavaScript utilities for testing and running permutation logic.
+- CSV generation for swap-count comparisons instead of execution time.
+- Documentation files in the `doc/` directory.
 
+## How to Compile
 
-1) how to compile
+Use the provided bash script:
 
-	bats\compile.bat
+```bat
+bash\build.sh
+```
 
-2) how to run
+## How to Run
 
-	bats\run_Permutate_java.bat
+For JavaScript, use the shell script:
 
+```sh
+./bash/jjs.sh
+```
 
-3) The project generate the CSV for the count of swaps by algorithm, instead of the time that takes, for the input data
+The script also supports arguments, for example:
 
-4) see documentation in the doc folder
+```sh
+./bash/jjs.sh abc -v -p -m naive
+```
 
+## Output
 
-Group:
-	Adrian Prendas 604140420 <br>
-	Joseph Artavia 116330698 <br>
-	Genesis Gonzales 116470598 <br>
-	Flavio Mejia 801030130 <br>
+The project generates a list of all permutation of a given string
+
+## Documentation
+
+Documentation is available in the `doc/` folder.
+
+## Team
+
+- Adrian Prendas 604140420
+- Joseph Artavia 116330698
+- Genesis Gonzales 116470598
+- Flavio Mejia 801030130
+
