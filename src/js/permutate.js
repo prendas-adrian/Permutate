@@ -22,7 +22,7 @@
 */
 function recursive_backtracking(a, i, doit){
 	incMargin();
-	printMargin('Enter Round i=' + i + ' ' + a);
+	//printMargin('Enter Round i=' + i + ' ' + a);
 	if (i == 0){
 		doit(a);
 		decMargin();
@@ -30,13 +30,13 @@ function recursive_backtracking(a, i, doit){
 	}
 	
 	for (var j = 0; j <= i; j++){
-		printMargin('Enter cycle i=' + i + ' j=' + j + ' ' + a);
+		//printMargin('Enter cycle i=' + i + ' j=' + j + ' ' + a);
 		swap(a, i, j);
 		recursive_backtracking(a, i - 1, doit);
 		swap(a, i, j);
 	}
 	
-	printMargin('Leave Round i=' + i + ' ' + a);
+	//printMargin('Leave Round i=' + i + ' ' + a);
 	decMargin();
 	
 }
@@ -48,7 +48,7 @@ function recursive_backtracking(a, i, doit){
 
 function recursive_heap_sedgewick(a, i, doit){
 	incMargin();
-	printMargin('Enter Round i=' + i + ' ' + a);
+	//printMargin('Enter Round i=' + i + ' ' + a);
 	if (i == 0){
 	   doit(a);
 	   decMargin();
@@ -56,10 +56,10 @@ function recursive_heap_sedgewick(a, i, doit){
 	}
 	for (var j = 0; j <= i; j++){
 		recursive_heap_sedgewick(a, i - 1, doit);
-		printMargin('return-and-swap: i=' + i + ' j=' + j);
+		//printMargin('return-and-swap: i=' + i + ' j=' + j);
 		swap(a, i % 2 ? j : 0, i);
 	}
-	printMargin('Leave Round i=' + i + ' ' + a);
+	//printMargin('Leave Round i=' + i + ' ' + a);
 	decMargin();
 	
 }
@@ -85,7 +85,7 @@ function next_lexicographic_permutation(a){
 }
 function  permutate_lexicographically(a, doit){
 	for (var i = 0; i < fact(a.length); i++){
-		printMargin('Round i=' + i + ' ' + a);
+		//printMargin('Round i=' + i + ' ' + a);
 		doit(a);
 		next_lexicographic_permutation(a);
 		
