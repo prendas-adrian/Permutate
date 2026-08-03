@@ -66,9 +66,17 @@ function genArray(n){
 
 
 function showPermutation(a){
-	if (permTester)
-	   permTester.add(new Permutation(method, a));
-	printPlain(format("%3.0f) %s", ++permutation, a.toString()));
+	try{
+		if (permTester)
+			permTester.add(new Permutation(method, a));
+			if(pipe)
+				printPlain(a.join(""));
+			else
+				printPlain(format("%3.0f) %s", ++permutation, a.toString()));
+	}catch(e){
+		//printPlain("Error: " + e);
+	}	
+	
 }
 
 
