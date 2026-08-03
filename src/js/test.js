@@ -86,7 +86,7 @@ function test_permutate(string, algorithmName, algorithm){
 
 function main(string, selectedMethod){
 	if(!pipe){
-		print("*** Testing Permutation with: " + string + " ***\n");
+		print("*** Testing Permutation with: " + string + " ***");
 	}
 	switch (selectedMethod){
 		case "all":
