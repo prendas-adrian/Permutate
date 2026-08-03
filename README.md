@@ -48,3 +48,4 @@ Documentation is available in the `doc/` folder.
 - Genesis Gonzales 116470598
 - Flavio Mejia 801030130
 
+<img width="1944" height="2160" alt="Image" src="https://github.com/user-attachments/assets/fe2ce87c-97cf-484a-b7e5-f705be6e1d08.gif" />
