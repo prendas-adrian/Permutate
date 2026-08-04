@@ -11,6 +11,9 @@ This repository includes:
 - CSV generation for swap-count comparisons instead of execution time.
 - Documentation files in the `doc/` directory.
 
+
+<img width="648" height="720" src="data/instructions.gif" />
+
 ## How to Compile
 
 Use the provided bash script:
@@ -30,9 +33,12 @@ For JavaScript, use the shell script:
 The script also supports arguments, for example:
 
 ```sh
-./bash/jjs.sh abc -v -p -m naive
+./bash/jjs.sh --help
 ```
 
+```sh
+./bash/jjs.sh abc -v -p -m naive
+```
 ## Output
 
 The project generates a list of all permutation of a given string
@@ -48,4 +54,3 @@ Documentation is available in the `doc/` folder.
 - Genesis Gonzales 116470598
 - Flavio Mejia 801030130
 
-<img width="1944" height="2160" alt="Image" src="https://github.com/user-attachments/assets/fe2ce87c-97cf-484a-b7e5-f705be6e1d08.gif" />
